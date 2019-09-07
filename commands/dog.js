@@ -2,7 +2,7 @@ const giphy = require('giphy-api')(process.env.GIPHY_API);
 
 module.exports.run = async (client, message) => {
     giphy.random({
-        tag: 'cat',
+        tag: 'dog',
         rating: 'g',
         limit: '1'
     }, function (err, res) { 
@@ -12,9 +12,9 @@ module.exports.run = async (client, message) => {
 
 module.exports.conf = {
     enabled: true,
-    aliases: ['kitty']
+    aliases: ['puppy']
 }
 
 module.exports.help = {
-    name: "cat"
+    name: "dog"
 }
