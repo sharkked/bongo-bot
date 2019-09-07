@@ -37,13 +37,13 @@ module.exports = message => {
             });
         }
         else if (/[^ ]{2,}er$/gi.test(message.content)) {
-            message.channel.send(`${words[words.length - 1].replace(/^\w/, c => c.toUpperCase())}? I hardly know her!`);
+            message.channel.send(`${words[words.length - 1].toLowerCase().replace(/^\w/, c => c.toUpperCase())}? I hardly know her!`);
         }
         else if (/^i['`]?m$/gi.test(words[0]) && words.length > 1) {
-            message.channel.send(`Hi ${message.content.slice(words[0].length + 1)}, I'm dad!`);
+            message.channel.send(`Hi ${message.content.slice(words[0].length + 1).toLowerCase()}, I'm dad!`);
         }
 
-        if (/^n[ o]+\W*$/gi.test(message.content)) {
+        if (/^n *[wy ]*[ o0]+\W*$/gi.test(message.content)) {
             message.channel.send('Yes!');
         }
 
