@@ -1,0 +1,26 @@
+{
+  "name": "Bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "dependencies": {
+    "@discordjs/uws": "^11.149.1",
+    "chalk": "^2.4.2",
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "moment": "^2.24.0",
+    "node-opus": "^0.3.2",
+    "sqlite": "^3.0.3",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
