@@ -22,8 +22,8 @@ module.exports = message => {
     } else {
         let words = message.content.split(/ +/g);
 
-        if (/n+\W*[il1]+\W*[g9]+\W*[g9]+\W*[e3]+\W*r+/gi.test(message.content) ||
-            /n+\W*[il1]+\W*[g9]+\W*[g9]+\W*[a4]+/gi.test(message.content)) {
+        if (/n\W*[il1]+\W*[g9]+\W*[g9]+\W*[e3]+\W*r/gi.test(message.content) ||
+            /n\W*[il1]+\W*[g9]+\W*[g9]+\W*[a4]/gi.test(message.content)) {
             if (config.pass.includes(message.author.id)) {
                 return;
             }
@@ -32,6 +32,13 @@ module.exports = message => {
                 files: [
                     './images/really.png'
                     ]
+            });
+        }
+        else if (/f+\W*[a4]+\W*[g9]+\W*[g9]+\W*[o0]+\W*[t7]/gi.test(message.content)) {
+            message.channel.send({
+                files: [
+                    '.images/james.png'
+                ]
             });
         }
         else if (/[^ ]{2,}er$/gi.test(message.content)) {
@@ -44,10 +51,10 @@ module.exports = message => {
         if (/^n[-n ]*[wy ]*[o0][ o0]*\W*$/gi.test(message.content)) {
             message.channel.send('Yes!');
         }
-        else if (/negative\W*/gi.test(message.content)) {
+        else if (/^negative\W*$/gi.test(message.content)) {
             message.channel.send("Affirmitive!");
         }
-        else if (/nope\W*/gi.test(message.content)) {
+        else if (/^nope\W*$/gi.test(message.content)) {
             message.channel.send("Yep!");
         }
 
