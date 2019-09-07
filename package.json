@@ -8,6 +8,7 @@
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
+    "worker": "node bot.js",
     "dev": "nodemon bot.js"
   },
   "dependencies": {
