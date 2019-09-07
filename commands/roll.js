@@ -1,10 +1,9 @@
 module.exports.run = (client, message, args) => {
     if (args.length == 0) {
-        message.channel.send(Math.floor(Math.random() * 100) + 1)
+        message.channel.send(`**${message.author.tag}** rolled a ${Math.floor(Math.random() * 100) + 1}`)
     } else if (args.length == 1) {
         if (/^\d*$/.test(args[0])) {
             let i = parseInt(args[0]);
-            console.log(i)
             if (i >= 1000000000 || i <= 1) {
                 message.channel.send(`**${message.author.tag}** Pick a valid number! (between 1 and 999,999,999)`);
                 return;

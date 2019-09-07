@@ -5,7 +5,6 @@ module.exports = message => {
     if (message.author.bot) return;
 
     if (message.content.indexOf(config.prefix) == 0) {
-        console.log('??')
         let client = message.client;
         let command = message.content.split(/ +/g)[0].slice(config.prefix.length);
         let args = message.content.split(/ +/g).slice(1);
@@ -69,7 +68,5 @@ module.exports = message => {
         if (/^a{12,}$/gi.test(message.content)) {
             message.react('🤔');
         }
-
-        
     }
 }
