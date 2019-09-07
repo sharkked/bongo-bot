@@ -23,8 +23,6 @@ module.exports = message => {
         let words = message.content.split(/ +/g);
 
         if (/n+\W*[il1]+\W*[g9]+\W*[g9]+\W*[e3]+\W*r+/gi.test(message.content) ||
-            /n+\W*[il1]+\W*[g9]+.*[g9]+\W*[e3]+\W*r+/gi.test(message.content) || 
-            /n+\W*[il1]+\W*[g9]+\W*[g9]+.*[e3]+\W*r+/gi.test(message.content) || 
             /n+\W*[il1]+\W*[g9]+\W*[g9]+\W*[a4]+/gi.test(message.content)) {
             if (config.pass.includes(message.author.id)) {
                 return;
