@@ -1,6 +1,6 @@
 const giphy = require('giphy-api')(process.env.GIPHY_API);
 
-module.exports.run = async (message) => {
+module.exports.run = async (client, message) => {
     giphy.random({
         tag: 'cats',
         rating: 'g',

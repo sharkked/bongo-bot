@@ -1,4 +1,4 @@
-module.exports.run = message => {
+module.exports.run = (client, message) => {
     message.reply('Pong!');
 }
 
