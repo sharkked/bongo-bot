@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const config = require('./config.json');
+require('dotenv').config();
 
 const l = require('./util/logger.js');
-
 const fs = require('fs');
 require('./util/eventLoader')(client);
 
@@ -25,4 +25,4 @@ fs.readdir('./commands/', (err, files) => {
     });
 });
 
-client.login(config.token);
+client.login();

@@ -1,6 +1,4 @@
 {
-  "token": process.env.BOT_TOKEN,
-  "owner":  process.env.OWNER,
   "prefix": "+",
   "pass":  ["231050071917985792"]
 }
