@@ -51,7 +51,7 @@ module.exports = message => {
             message.channel.send("Yep!");
         }
 
-        if (/^A{12,}$/gi.test(message.content)) {
+        if (/^a{12,}$/gi.test(message.content)) {
             message.channel.send("Okay buddy");
         }
 
