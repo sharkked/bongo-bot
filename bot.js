@@ -25,4 +25,4 @@ fs.readdir('./commands/', (err, files) => {
     });
 });
 
-client.login();
+client.login(process.env.CLIENT_TOKEN);
