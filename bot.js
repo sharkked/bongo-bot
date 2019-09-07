@@ -6,6 +6,7 @@ require('dotenv').config();
 
 const l = require('./util/logger.js');
 const fs = require('fs');
+const http = require('http')
 require('./util/eventLoader')(client);
 
 
@@ -26,3 +27,7 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 client.login(process.env.CLIENT_TOKEN);
+
+setInterval(function () { // Keeps the bot awake
+    http.get('http://bongobongobot.herokuapp.com');
+}, 300000);
