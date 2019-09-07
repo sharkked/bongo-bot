@@ -67,7 +67,7 @@ module.exports = message => {
         }
 
         if (/^a{12,}$/gi.test(message.content)) {
-            message.channel.send("Okay buddy");
+            message.react('🤔');
         }
 
         
