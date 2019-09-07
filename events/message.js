@@ -6,7 +6,7 @@ module.exports = message => {
 
     if (message.content.indexOf(config.prefix) == 0) {
         let client = message.client;
-        let command = message.content.split(/ +/g)[0].slice(config.prefix.length);
+        let command = message.content.split(/ +/g)[0].slice(config.prefix.length).toLowerCase();
         let args = message.content.split(/ +/g).slice(1);
         let cmd;
         if (client.commands.has(command)) {
