@@ -34,7 +34,7 @@ module.exports = message => {
                     ]
             });
         }
-        else if (/f+\W*[a4]+\W*[g9]+\W*[g9]+\W*[o0]+\W*[t7]/gi.test(message.content)) {
+        else if (/f\W*[a4]+\W*[g9]+\W*[g9]+\W*[o0]+\W*[t7]/gi.test(message.content)) {
             message.channel.send({
                 files: [
                     '.images/james.png'
