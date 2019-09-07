@@ -43,7 +43,7 @@ module.exports = message => {
             message.channel.send(`Hi ${message.content.slice(words[0].length + 1).toLowerCase()}, I'm dad!`);
         }
 
-        if (/^n[-n ]*[wy ]*[ o0]+\W*$/gi.test(message.content)) {
+        if (/^n[-n ]*[wy ]*[o0][ o0]*\W*$/gi.test(message.content)) {
             message.channel.send('Yes!');
         }
 
