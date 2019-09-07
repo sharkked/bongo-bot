@@ -27,12 +27,15 @@ module.exports = message => {
             if (config.pass.includes(message.author.id)) {
                 return;
             }
-
             message.channel.send({
                 files: [
                     './images/really.png'
                     ]
             });
+            message.delete()
+            .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+            .catch(console.error);
+            return;
         }
         else if (/f\W*[a4]+\W*[g9]+\W*[g9]+\W*[o0]+\W*[t7]/gi.test(message.content)) {
             message.channel.send({
@@ -40,6 +43,11 @@ module.exports = message => {
                     './images/james.png'
                 ]
             });
+
+            message.delete()
+            .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+            .catch(console.error);
+            return;
         }
         else if (/[^ ]{2,}er$/gi.test(message.content)) {
             message.channel.send(`${words[words.length - 1].toLowerCase().replace(/^\w/, c => c.toUpperCase())}? I hardly know her!`);
