@@ -44,6 +44,12 @@ module.exports = message => {
         if (/^n[-n ]*[wy ]*[o0][ o0]*\W*$/gi.test(message.content)) {
             message.channel.send('Yes!');
         }
+        else if (/negative\W*/gi.test(message.content)) {
+            message.channel.send("Affirmitive!");
+        }
+        else if (/nope\W*/gi.test(message.content)) {
+            message.channel.send("Yep!");
+        }
 
         
     }
