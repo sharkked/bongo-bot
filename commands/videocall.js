@@ -1,7 +1,7 @@
 module.exports.run = (client, message) => {
     if (message.member) {
         if (message.member.voiceChannel) {
-            message.channel.send(`**${message.author.tag}** https://www.discordapp.com/channels/${message.guild.id}/${message.member.voiceChannelID}`);
+            message.channel.send(`**${message.author.tag}** <https://www.discordapp.com/channels/${message.guild.id}/${message.member.voiceChannelID}>`);
         }
         else {
             message.channel.send(`**${message.author.tag}** You're not in a voice channel!`);
